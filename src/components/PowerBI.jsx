@@ -7,6 +7,7 @@ export default function PowerBI({ embedUrl, accessToken }) {
       embedConfig={{
         type: "dashboard",
         id: "dashboard-id",
+        pageView: "fitToWidth", // Properties: fitToWidth, oneColumn, actualSize
         embedUrl: embedUrl,
         accessToken: accessToken,
         tokenType: models.TokenType.Embed,
