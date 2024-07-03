@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage.jsx";
 import PageQuiz from "./pages/PageQuiz.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import InfoPage from "./pages/InfoPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,10 +22,15 @@ const router = createBrowserRouter([
         id: "quizPage",
         element: <PageQuiz />,
       },
+      {
+        path: "/info",
+        id: "infoPage",
+        element: <InfoPage />,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <RouterProvider router={router} />,
 );
