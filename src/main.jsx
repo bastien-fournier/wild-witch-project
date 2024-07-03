@@ -1,10 +1,31 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+import HomePage from "./pages/HomePage.jsx";
+import PageQuiz from "./pages/PageQuiz.jsx";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        id: "homePage",
+        element: <HomePage />,
+      },
+      {
+        path: "/quiz-page",
+        id: "quizPage",
+        element: <PageQuiz />,
+      },
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
+);
