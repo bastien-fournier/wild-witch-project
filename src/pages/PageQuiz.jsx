@@ -1,11 +1,13 @@
-import ProgressBar from 'react-bootstrap/ProgressBar';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import BasicExample from "../components/CardQuizz";
+import ProgressBar from "../components/ProgressBar";
 
-
+// Page principale du quiz intégrant les deux composants ci-dessus
 export default function PageQuiz() {
-  return <div>Hola que tal</div>;
-
-
-  
+  return (
+    <div>
+      <h1>Quizz</h1>
+      <ProgressBar />
+      <BasicExample />
+    </div>
+  );
 }
