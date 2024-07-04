@@ -8,6 +8,10 @@ import PageQuiz from "./pages/PageQuiz.jsx";
 import PageReponse from "./pages/PageReponse.jsx";
 import Sanbilisation from "./pages/Sanbilisation.jsx";
 import AlertePage from "./pages/AlertePage.jsx";
+import Sanbilisation from "./pages/Sanbilisation.jsx";
+import AlertePage from "./pages/AlertePage.jsx";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import InfoPage from "./pages/InfoPage.jsx";
 import GraphPage from "./pages/GraphPage.jsx";
 
