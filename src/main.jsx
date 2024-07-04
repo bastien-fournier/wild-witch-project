@@ -4,6 +4,8 @@ import "./index.css";
 
 import HomePage from "./pages/HomePage.jsx";
 import PageQuiz from "./pages/PageQuiz.jsx";
+import Sanbilisation from "./pages/Sanbilisation.jsx";
+import AlertePage from "./pages/AlertePage.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -20,6 +22,16 @@ const router = createBrowserRouter([
         path: "/quiz-page",
         id: "quizPage",
         element: <PageQuiz />,
+      },
+      {
+        path: "/sansibilisation",
+        id: "sansibilisation",
+        element: <Sanbilisation />,
+      },
+      {
+        path: "/alerte-page",
+        id: "salerte-page",
+        element: <AlertePage />,
       },
     ],
   },
