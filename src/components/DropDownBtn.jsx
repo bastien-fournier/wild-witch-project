@@ -36,7 +36,11 @@ export default function DropDownBtn() {
               auto: "bi-circle-half",
             };
             return (
-              <DropdownItem key={key}>
+              <DropdownItem
+                className="d-flex align-items-center"
+                data-bs-theme-value={theme}
+                key={key}
+              >
                 <svg
                   xmlns={icons.xmlns}
                   width={icons.widthHeight}
@@ -60,7 +64,7 @@ export default function DropDownBtn() {
                   width={icons.widthHeight}
                   height={icons.widthHeight}
                   fill={icons.fill}
-                  className={`bi bi-check2 ms-auto ${isActive ? "" : "d-none"}`}
+                  className={`bi bi-check2 ms-auto ${isActive ? "d-flex" : "d-none"}`}
                   viewBox={icons.viewBox}
                 >
                   <path d={icons.path["bi-check2"]} />
