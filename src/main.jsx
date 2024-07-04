@@ -11,6 +11,7 @@ import AlertePage from "./pages/AlertePage.jsx";
 import InfoPage from "./pages/InfoPage.jsx";
 import GraphPage from "./pages/GraphPage.jsx";
 import DataPage from "./pages/DataPage.jsx";
+import ThemeContextProvider from "./context/ThemeContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -61,5 +62,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <ThemeContextProvider>
+    <RouterProvider router={router} />,
+  </ThemeContextProvider>,
 );
