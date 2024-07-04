@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import HomePage from "./pages/HomePage.jsx";
 import PageQuiz from "./pages/PageQuiz.jsx";
-// import PageReponse from "./pages/PageReponse.jsx";
+import PageReponse from "./pages/PageReponse.jsx";
 import Sanbilisation from "./pages/Sanbilisation.jsx";
 import AlertePage from "./pages/AlertePage.jsx";
 import InfoPage from "./pages/InfoPage.jsx";
@@ -25,6 +25,11 @@ const router = createBrowserRouter([
         path: "/quiz-page",
         id: "quizPage",
         element: <PageQuiz />,
+      },
+      {
+        path: "/quiz-reponse",
+        id: "quizReponse",
+        element: <PageReponse />,
       },
       {
         path: "/sansibilisation",
