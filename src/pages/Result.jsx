@@ -47,7 +47,11 @@ function Result() {
         </Modal.Header>
 
         <Modal.Body style={{ backgroundColor: "#DCC1FF" }}>
-          <img src={getImage(score)} alt="Witch Theme" style={{ width: "100%", marginBottom: "15px" }} />
+          <img
+            src={getImage(score)}
+            alt="Witch Theme"
+            style={{ width: "100%", marginBottom: "15px" }}
+          />
           <p>{getMessage(score)}</p>
           <p>Votre score est de {score} sur 5.</p>
         </Modal.Body>

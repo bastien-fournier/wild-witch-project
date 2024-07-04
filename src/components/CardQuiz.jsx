@@ -7,7 +7,8 @@ import ListGroup from "react-bootstrap/ListGroup";
 const questions = [
   {
     id: 1,
-    question: "Quel événement historique est souvent associé à la persécution des sorcières en Europe et en Amérique ?",
+    question:
+      "Quel événement historique est souvent associé à la persécution des sorcières en Europe et en Amérique ?",
     answers: [
       { text: "A. La Peste Noire", isCorrect: false },
       { text: "B. Les Croisades", isCorrect: false },
@@ -16,7 +17,8 @@ const questions = [
   },
   {
     id: 2,
-    question: "Quelle maladie dévastatrice a ravagé l'Europe au XIVe siècle, mais n'est pas directement liée aux procès de sorcières ?",
+    question:
+      "Quelle maladie dévastatrice a ravagé l'Europe au XIVe siècle, mais n'est pas directement liée aux procès de sorcières ?",
     answers: [
       { text: "A. La Peste Noire", isCorrect: true },
       { text: "B. La Lèpre", isCorrect: false },
@@ -25,7 +27,8 @@ const questions = [
   },
   {
     id: 3,
-    question: "Quel mouvement religieux et militaire des XIe au XIIIe siècles n'est pas associé à la persécution des sorcières ?",
+    question:
+      "Quel mouvement religieux et militaire des XIe au XIIIe siècles n'est pas associé à la persécution des sorcières ?",
     answers: [
       { text: "A. Les Croisades", isCorrect: false },
       { text: "B. La Reconquista", isCorrect: false },
@@ -34,7 +37,8 @@ const questions = [
   },
   {
     id: 4,
-    question: "Quelle période historique est spécifiquement associée aux célèbres procès de sorcières à Salem, Massachusetts ?",
+    question:
+      "Quelle période historique est spécifiquement associée aux célèbres procès de sorcières à Salem, Massachusetts ?",
     answers: [
       { text: "A. Le Maccarthisme", isCorrect: false },
       { text: "B. La Révolution Américaine", isCorrect: false },
@@ -43,7 +47,8 @@ const questions = [
   },
   {
     id: 5,
-    question: "Quel terme désigne la pratique de juger et de condamner des personnes accusées de sorcellerie, souvent par des tribunaux ecclésiastiques ?",
+    question:
+      "Quel terme désigne la pratique de juger et de condamner des personnes accusées de sorcellerie, souvent par des tribunaux ecclésiastiques ?",
     answers: [
       { text: "A. L'Inquisition", isCorrect: true },
       { text: "B. L'Excommunication", isCorrect: false },
@@ -65,7 +70,9 @@ function PageQuiz() {
     const nextQuestion = currentQuestionIndex + 1;
 
     if (nextQuestion < questions.length) {
-      navigate("/quiz-reponse", { state: { score: nextScore, currentQuestion: nextQuestion } });
+      navigate("/quiz-reponse", {
+        state: { score: nextScore, currentQuestion: nextQuestion },
+      });
     } else {
       navigate("/result", { state: { score: nextScore } });
     }
