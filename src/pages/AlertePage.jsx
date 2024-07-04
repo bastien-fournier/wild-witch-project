@@ -1,10 +1,10 @@
-import Buttons from "../components/Buttons";
+// import Buttons from "../components/Buttons";
+import Modals from "../components/Modals";
 
 export default function AlertePage() {
   return (
     <div>
-      <Buttons text="Précédent" link="/sansibilisation" />
-      <Buttons text="Suivant" link="/quiz-page" />
+      <Modals />
     </div>
   );
 }
