@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 
-export default function Buttons({ text }) {
+export default function Buttons({ text, to }) {
   return (
     <>
       <Button variant="primary" className="mx-2 my-2">

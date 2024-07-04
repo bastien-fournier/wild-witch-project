@@ -1,14 +1,14 @@
 import { Container } from "react-bootstrap";
-import PowerBI from "../components/PowerBI.jsx";
+import TableauEmbed from "../components/TableauEmbed.jsx";
 
 export default function GraphPage() {
-  const embedUrl = "https://app.powerbi.com/reportEmbed?..."; // L'URL de l'iframe du dashboard Power BI
-  const accessToken = "votre-access-token"; // Token d'accès pour les dashboards sécurisés
+  const tableauUrl =
+    "https://public.tableau.com/views/hackathon4_17159405552530/Tableaudebord1";
 
   return (
     <>
       <Container style={{ height: "100vh" }} className="mt-5">
-        <PowerBI embedUrl={embedUrl} accessToken={accessToken} />
+        <TableauEmbed tableauUrl={tableauUrl} />
       </Container>
     </>
   );
