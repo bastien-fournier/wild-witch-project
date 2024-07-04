@@ -11,6 +11,7 @@ import AlertePage from "./pages/AlertePage.jsx";
 import InfoPage from "./pages/InfoPage.jsx";
 import GraphPage from "./pages/GraphPage.jsx";
 import DataPage from "./pages/DataPage.jsx";
+import Result from "./pages/Result.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
         path: "/quiz-reponse",
         id: "quizReponse",
         element: <PageReponse />,
+      },
+      {
+        path: "/result",
+        id: "result",
+        element: <Result />,
       },
       {
         path: "/sansibilisation",

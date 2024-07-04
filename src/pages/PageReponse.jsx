@@ -1,35 +1,30 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Col, Container, Row, Button } from "react-bootstrap";
-import CardReponse from "../components/CardReponse.jsx";
-// import ProgressBar from "../components/ProgressBar";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
-export default function PageReponse() {
-  const location = useLocation();
+function PageReponse() {
   const navigate = useNavigate();
-  const { isCorrect, nextQuestion } = location.state || { isCorrect: false, nextQuestion: 0 };
+  const location = useLocation();
+  const { isCorrect, score, currentQuestion } = location.state || {};
 
-  const title = "Réponse";
-  const text = isCorrect ? "Bonne réponse !" : "Mauvaise réponse. Réessayez.";
-
-  const handleNext = () => {
-    navigate("/quiz-page", { state: { currentQuestion: nextQuestion } });
+  const handleNextQuestion = () => {
+    navigate("/quiz-page", { state: { score, currentQuestion } });
   };
 
   return (
-    <>
-      <h1>Quizz</h1>
-      <Container className="mt-5">
-      {/* <ProgressBar /> */}
-        <Row className="justify-content-center">
-          <CardReponse title={title} text={text} />
-        </Row>
-        <Row className="justify-content-center align-items-center flex-column mt-3">
-          <Col className="text-center">
-            <Button variant="primary" onClick={handleNext}>Suivant</Button>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <div className="d-flex justify-content-center my-4">
+      <Card style={{ width: "18rem" }}>
+        <Card.Body>
+          <Card.Title>Réponse</Card.Title>
+          <Card.Text>{isCorrect ? "Bonne réponse !" : "Mauvaise réponse."}</Card.Text>
+          <Button variant="primary" onClick={handleNextQuestion}>
+            Suivant
+          </Button>
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
+
+export default PageReponse;
