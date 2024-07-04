@@ -10,6 +10,7 @@ import Sanbilisation from "./pages/Sanbilisation.jsx";
 import AlertePage from "./pages/AlertePage.jsx";
 import InfoPage from "./pages/InfoPage.jsx";
 import GraphPage from "./pages/GraphPage.jsx";
+import DataPage from "./pages/DataPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
         path: "/graph",
         id: "graphPage",
         element: <GraphPage />,
+      },
+      {
+        path: "/data-page",
+        id: "data-page",
+        element: <DataPage />,
       },
     ],
   },
