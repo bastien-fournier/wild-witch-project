@@ -15,8 +15,8 @@ export default function Sambilisation() {
           gap: 30,
         }}
       >
-        <Buttons text="Précédent" />
-        <Buttons text="Suivant" />
+        <Buttons text="Précédent" link="/data-page" />
+        <Buttons text="Suivant" link="/alerte-page" />
       </div>
     </>
   );

@@ -15,8 +15,8 @@ export default function InfoPage() {
         </Row>
         <Row className="justify-content-center align-items-center flex-column mt-3">
           <Col className="text-center">
-            <Buttons text="Précédent" />
-            <Buttons text="Suivant" />
+            <Buttons text="Précédent" link="/" />
+            <Buttons text="Suivant" link="/data-page" />
           </Col>
         </Row>
       </Container>
