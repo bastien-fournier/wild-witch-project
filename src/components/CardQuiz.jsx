@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 
-function PageQuiz() {
+function CardQuiz() {
   const navigate = useNavigate();
 
   const handleAnswer = (isCorrect) => {
@@ -24,13 +24,19 @@ function PageQuiz() {
         </Card.Body>
         <ListGroup className="text-center">
           <ListGroup.Item className="d-flex justify-content-center">
-            <Button variant="light" onClick={() => handleAnswer(false)}>A. La Peste Noire</Button>
+            <Button variant="light" onClick={() => handleAnswer(false)}>
+              A. La Peste Noire
+            </Button>
           </ListGroup.Item>
           <ListGroup.Item className="d-flex justify-content-center">
-            <Button variant="light" onClick={() => handleAnswer(false)}>B. Les Croisades</Button>
+            <Button variant="light" onClick={() => handleAnswer(false)}>
+              B. Les Croisades
+            </Button>
           </ListGroup.Item>
           <ListGroup.Item className="d-flex justify-content-center">
-            <Button variant="light" onClick={() => handleAnswer(true)}>C. Les Procès de sorcières de Salem</Button>
+            <Button variant="light" onClick={() => handleAnswer(true)}>
+              C. Les Procès de sorcières de Salem
+            </Button>
           </ListGroup.Item>
         </ListGroup>
       </Card>
@@ -38,4 +44,4 @@ function PageQuiz() {
   );
 }
 
-export default PageQuiz;
+export default CardQuiz;
