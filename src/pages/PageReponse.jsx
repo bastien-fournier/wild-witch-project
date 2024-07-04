@@ -17,7 +17,9 @@ function PageReponse() {
       <Card style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Title>Réponse</Card.Title>
-          <Card.Text>{isCorrect ? "Bonne réponse !" : "Mauvaise réponse."}</Card.Text>
+          <Card.Text>
+            {isCorrect ? "Bonne réponse !" : "Mauvaise réponse."}
+          </Card.Text>
           <Button variant="primary" onClick={handleNextQuestion}>
             Suivant
           </Button>
