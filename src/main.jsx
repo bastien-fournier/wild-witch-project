@@ -5,13 +5,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import HomePage from "./pages/HomePage.jsx";
 import PageQuiz from "./pages/PageQuiz.jsx";
-import PageReponse from "./pages/PageReponse.jsx";
+// import PageReponse from "./pages/PageReponse.jsx";
 import Sanbilisation from "./pages/Sanbilisation.jsx";
 import AlertePage from "./pages/AlertePage.jsx";
-import Sanbilisation from "./pages/Sanbilisation.jsx";
-import AlertePage from "./pages/AlertePage.jsx";
-
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import InfoPage from "./pages/InfoPage.jsx";
 import GraphPage from "./pages/GraphPage.jsx";
 
@@ -30,18 +26,13 @@ const router = createBrowserRouter([
         element: <PageQuiz />,
       },
       {
-        path: "/quiz-reponse",
-        id: "reponseQuiz",
-        element: <PageReponse />,
-      },
-      {
         path: "/sansibilisation",
         id: "sansibilisation",
         element: <Sanbilisation />,
       },
       {
         path: "/alerte-page",
-        id: "salerte-page",
+        id: "alerte-page",
         element: <AlertePage />,
       },
       {
@@ -53,12 +44,11 @@ const router = createBrowserRouter([
         path: "/graph",
         id: "graphPage",
         element: <GraphPage />,
-
       },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-<RouterProvider router={router} />,
+  <RouterProvider router={router} />
 );
