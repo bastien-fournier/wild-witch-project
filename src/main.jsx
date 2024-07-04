@@ -10,6 +10,7 @@ import Sanbilisation from "./pages/Sanbilisation.jsx";
 import AlertePage from "./pages/AlertePage.jsx";
 import InfoPage from "./pages/InfoPage.jsx";
 import GraphPage from "./pages/GraphPage.jsx";
+import DataPage from "./pages/DataPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/quiz-reponse",
-        id: "reponseQuiz",
+        id: "quizReponse",
         element: <PageReponse />,
       },
       {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/alerte-page",
-        id: "salerte-page",
+        id: "alerte-page",
         element: <AlertePage />,
       },
       {
@@ -49,12 +50,16 @@ const router = createBrowserRouter([
         path: "/graph",
         id: "graphPage",
         element: <GraphPage />,
-
+      },
+      {
+        path: "/data-page",
+        id: "data-page",
+        element: <DataPage />,
       },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-<RouterProvider router={router} />,
+  <RouterProvider router={router} />
 );

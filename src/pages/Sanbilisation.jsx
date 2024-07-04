@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Buttons from "../components/Buttons";
 import TabsComponents from "../components/TabsComponents";
 
@@ -16,12 +15,8 @@ export default function Sambilisation() {
           gap: 30,
         }}
       >
-        <Link to="/alerte-page">
-          <Buttons />
-        </Link>
-        <Link to="/alerte-page">
-          <Buttons />
-        </Link>
+        <Buttons text="Précédent" link="/data-page" />
+        <Buttons text="Suivant" link="/alerte-page" />
       </div>
     </>
   );
