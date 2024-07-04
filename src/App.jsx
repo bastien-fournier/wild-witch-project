@@ -4,12 +4,9 @@ import LightDarkTheme from "./components/LightDarkTheme.jsx";
 import { useTheme } from "./context/ThemeContext.jsx";
 
 function App() {
-  const { darkblue } = useTheme();
+  const { theme } = useTheme();
   const appStyles = {
-    background:
-    theme ===
-      ? "var( --background-gradient-false)"
-      : "var(--background-gradient)",
+    background: theme === "light" ? "white" : "dark",
   };
   return (
     <main style={appStyles}>
