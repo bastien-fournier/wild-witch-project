@@ -26,14 +26,13 @@ const router = createBrowserRouter([
         element: <PageQuiz />,
       },
       {
-
         path: "/sansibilisation",
         id: "sansibilisation",
         element: <Sanbilisation />,
       },
       {
         path: "/alerte-page",
-        id: "salerte-page",
+        id: "alerte-page",
         element: <AlertePage />,
 
         path: "/info",
@@ -44,12 +43,11 @@ const router = createBrowserRouter([
         path: "/graph",
         id: "graphPage",
         element: <GraphPage />,
-
       },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />,
+  <RouterProvider router={router} />
 );

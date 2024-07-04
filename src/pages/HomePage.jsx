@@ -1,5 +1,15 @@
 import Buttons from "../components/Buttons";
 
 export default function HomePage() {
-  return <Buttons />;
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Buttons text="Commencer" link="/info" />
+    </div>
+  );
 }
