@@ -3,7 +3,7 @@ import "./App.scss";
 import LightDarkTheme from "./components/LightDarkTheme.jsx";
 import { useTheme } from "./context/ThemeContext.jsx";
 
-function App() {
+export default function App() {
   const { theme } = useTheme();
   const appStyles = {
     background: theme === "light" ? "white" : "dark",
@@ -15,5 +15,3 @@ function App() {
     </main>
   );
 }
-
-export default App;

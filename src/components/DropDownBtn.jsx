@@ -6,12 +6,15 @@ import {
 } from "react-bootstrap";
 import { icons } from "../assets/icons.js";
 import { useState } from "react";
+import { useTheme } from "../context/ThemeContext.jsx";
 
 export default function DropDownBtn() {
-  const [selectedTheme, setSelectedTheme] = useState("auto");
+  const { theme, setTheme } = useTheme();
+  const [selectedTheme, setSelectedTheme] = useState(theme ? "dark" : "light");
 
   const handleThemeChange = (theme) => {
     setSelectedTheme(theme);
+    setTheme(theme === "dark");
   };
 
   const themeIcons = {
@@ -20,7 +23,6 @@ export default function DropDownBtn() {
     auto: "bi-circle-half",
   };
 
-  console.log(themeIcons["dark"]);
   const getPath = (iconName) => {
     if (iconName === themeIcons["dark"]) {
       return (
@@ -32,8 +34,6 @@ export default function DropDownBtn() {
     }
     return <path d={icons.path[iconName]} />;
   };
-
-  console.log(icons.path[themeIcons[selectedTheme]]);
 
   return (
     <>
@@ -76,7 +76,7 @@ export default function DropDownBtn() {
                   className={`bi ${themeIcons[theme]} me-2 opacity-50`}
                   viewBox={icons.viewBox}
                 >
-                  {getPath(themeIcons[selectedTheme])}
+                  {getPath(themeIcons[theme])}
                 </svg>{" "}
                 {theme.charAt(0).toUpperCase() + theme.slice(1)}
                 <svg
