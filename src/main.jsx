@@ -8,6 +8,8 @@ import Sanbilisation from "./pages/Sanbilisation.jsx";
 import AlertePage from "./pages/AlertePage.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import InfoPage from "./pages/InfoPage.jsx";
+import GraphPage from "./pages/GraphPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,7 @@ const router = createBrowserRouter([
         element: <PageQuiz />,
       },
       {
+
         path: "/sansibilisation",
         id: "sansibilisation",
         element: <Sanbilisation />,
@@ -32,11 +35,21 @@ const router = createBrowserRouter([
         path: "/alerte-page",
         id: "salerte-page",
         element: <AlertePage />,
+
+        path: "/info",
+        id: "infoPage",
+        element: <InfoPage />,
+      },
+      {
+        path: "/graph",
+        id: "graphPage",
+        element: <GraphPage />,
+
       },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <RouterProvider router={router} />,
 );
