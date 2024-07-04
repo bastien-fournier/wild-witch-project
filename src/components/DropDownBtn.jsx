@@ -10,11 +10,11 @@ import { useTheme } from "../context/ThemeContext.jsx";
 
 export default function DropDownBtn() {
   const { theme, setTheme } = useTheme();
-  const [selectedTheme, setSelectedTheme] = useState(theme ? "dark" : "light");
+  const [selectedTheme, setSelectedTheme] = useState(theme ? "light" : "dark");
 
   const handleThemeChange = (theme) => {
     setSelectedTheme(theme);
-    setTheme(theme === "dark");
+    setTheme(theme);
   };
 
   const themeIcons = {

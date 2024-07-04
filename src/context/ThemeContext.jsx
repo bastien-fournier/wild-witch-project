@@ -4,13 +4,8 @@ const ThemeContext = createContext();
 
 export default function ThemeContextProvider({ children }) {
   const [theme, setTheme] = useState(false);
-  const memo = useMemo(
-    () => ({
-      theme,
-      setTheme,
-    }),
-    [theme, setTheme],
-  );
+
+  const memo = useMemo(() => ({ theme, setTheme }), [theme]);
 
   return (
     <>

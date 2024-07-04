@@ -6,7 +6,10 @@ import { useTheme } from "./context/ThemeContext.jsx";
 export default function App() {
   const { theme } = useTheme();
   const appStyles = {
-    background: theme === "light" ? "white" : "dark",
+    backgroundColor: theme === "light" ? "var(--bs-light)" : "var(--bs-dark)",
+    minHeight: "100vh",
+    margin: 0,
+    padding: 0,
   };
   return (
     <main style={appStyles}>

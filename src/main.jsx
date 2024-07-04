@@ -69,6 +69,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeContextProvider>
-    <RouterProvider router={router} />,
+    <RouterProvider router={router} />
   </ThemeContextProvider>,
 );
