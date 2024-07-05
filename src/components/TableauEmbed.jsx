@@ -31,7 +31,7 @@ export default function TableauEmbed({ tableauUrl }) {
 
   return (
     <>
-      <div ref={ref} />
+      <div ref={ref} style={{ width: "25rem" }} />
     </>
   );
 }
