@@ -14,7 +14,7 @@ export default function DataPage() {
         </Row>
         <Row className="justify-content-center align-items-center flex-column mt-3">
           <Col className="text-center">
-            <Buttons text="Précédent" link="/" />
+            <Buttons text="Précédent" link="/info" />
             <Buttons text="Suivant" link="/sansibilisation" />
           </Col>
         </Row>

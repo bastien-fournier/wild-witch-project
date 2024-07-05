@@ -8,7 +8,7 @@ export default function InfoPage() {
     "Salut à toi, aventurier du web ! Prépare-toi à un voyage à travers le temps où nous comparerons les procès de sorcellerie en Europe avec la situation actuelle des femmes dans le monde du travail. Oui, on va parler de sorcières, de bûchers et... de taux d'emploi ! Accroche-toi, ça va être magique !";
   return (
     <>
-      <Container className="mt-5">
+      <Container style={{ height: "100vh" }} className="mt-5">
         <Row className="justify-content-center">
           <CardInfo title={title} text={text} />
         </Row>
