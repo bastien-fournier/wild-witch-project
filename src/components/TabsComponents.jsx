@@ -11,7 +11,6 @@ export default function TabsComponents() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        marginTop: 150,
       }}
     >
       <Tabs

@@ -1,6 +1,7 @@
 import CardInfo from "../components/CardInfo.jsx";
 import { Col, Container, Row } from "react-bootstrap";
 import Buttons from "../components/Buttons.jsx";
+import darkAcademia from "../assets/images/dark-academia-7471412_1280.jpg";
 
 export default function InfoPage() {
   const title = "Bienvenue dans le Monde Enchanté de l'Inclusion !";
@@ -10,7 +11,7 @@ export default function InfoPage() {
     <>
       <Container style={{ height: "100vh" }} className="mt-5">
         <Row className="justify-content-center">
-          <CardInfo title={title} text={text} />
+          <CardInfo title={title} text={text} img={darkAcademia} />
         </Row>
         <Row className="justify-content-center align-items-center flex-column mt-3">
           <Col className="text-center">
