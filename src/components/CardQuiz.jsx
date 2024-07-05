@@ -8,51 +8,81 @@ const questions = [
   {
     id: 1,
     question:
-      "Quel événement historique est souvent associé à la persécution des sorcières en Europe et en Amérique ?",
+      "Pourquoi est-il crucial d'analyser le passé des accusations de sorcellerie pour comprendre les injustices présentes ?",
     answers: [
-      { text: "A. La Peste Noire", isCorrect: false },
-      { text: "B. Les Croisades", isCorrect: false },
-      { text: "C. Les Procès de sorcières de Salem", isCorrect: true },
+      {
+        text: "A. Pour promouvoir un environnement de travail inclusif",
+        isCorrect: false,
+      },
+      {
+        text: "B. Pour bâtir un avenir équitable et inclusif",
+        isCorrect: true,
+      },
+      {
+        text: "C. Pour comparer les taux d'emploi des femmes aujourd'hui",
+        isCorrect: false,
+      },
     ],
   },
   {
     id: 2,
     question:
-      "Quelle maladie dévastatrice a ravagé l'Europe au XIVe siècle, mais n'est pas directement liée aux procès de sorcières ?",
+      "Quelle perspective l'analyse des accusations de sorcellerie offre-t-elle sur les progrès en matière d'égalité des sexes ?",
     answers: [
-      { text: "A. La Peste Noire", isCorrect: true },
-      { text: "B. La Lèpre", isCorrect: false },
-      { text: "C. La Grippe Espagnole", isCorrect: false },
+      { text: "A. Une perspective économique", isCorrect: false },
+      { text: "B. Une perspective historique", isCorrect: true },
+      { text: "C. Une perspective politique", isCorrect: false },
     ],
   },
   {
     id: 3,
     question:
-      "Quel mouvement religieux et militaire des XIe au XIIIe siècles n'est pas associé à la persécution des sorcières ?",
+      "Pourquoi comparer les procès de sorcellerie aux taux d'emploi des femmes est-il significatif selon le paragraphe ?",
     answers: [
-      { text: "A. Les Croisades", isCorrect: false },
-      { text: "B. La Reconquista", isCorrect: false },
-      { text: "C. La Guerre de Cent Ans", isCorrect: true },
+      {
+        text: "A. Pour souligner les défis économiques actuels",
+        isCorrect: false,
+      },
+      {
+        text: "B. Pour illustrer les progrès et les défis en matière d'inclusion professionnelle",
+        isCorrect: true,
+      },
+      {
+        text: "C. Pour évaluer l'impact des politiques publiques sur l'emploi des femmes",
+        isCorrect: false,
+      },
     ],
   },
   {
     id: 4,
     question:
-      "Quelle période historique est spécifiquement associée aux célèbres procès de sorcières à Salem, Massachusetts ?",
+      "Qu'est-ce que les chiffres comparatifs des procès de sorcellerie et des taux d'emploi des femmes révèlent selon le paragraphe ?",
     answers: [
-      { text: "A. Le Maccarthisme", isCorrect: false },
-      { text: "B. La Révolution Américaine", isCorrect: false },
-      { text: "C. Les Procès de sorcières de Salem", isCorrect: true },
+      {
+        text: "A. Une augmentation des discriminations historiques",
+        isCorrect: false,
+      },
+      {
+        text: "B. Une comparaison frappante entre le passé et le présent en matière d'égalité des sexes",
+        isCorrect: true,
+      },
+      {
+        text: "C. Une diminution des inégalités économiques",
+        isCorrect: false,
+      },
     ],
   },
   {
     id: 5,
     question:
-      "Quel terme désigne la pratique de juger et de condamner des personnes accusées de sorcellerie, souvent par des tribunaux ecclésiastiques ?",
+      "Quel aspect des procès de sorcellerie est essentiel pour comprendre les obstacles actuels à l'inclusion des femmes selon le paragraphe ?",
     answers: [
-      { text: "A. L'Inquisition", isCorrect: true },
-      { text: "B. L'Excommunication", isCorrect: false },
-      { text: "C. La Réforme", isCorrect: false },
+      { text: "A. Leur impact sur les politiques de santé", isCorrect: false },
+      { text: "B. Leur lien avec les pratiques religieuses", isCorrect: false },
+      {
+        text: "C. Leur révélation des racines profondes des injustices présentes",
+        isCorrect: true,
+      },
     ],
   },
 ];
@@ -71,7 +101,7 @@ function PageQuiz() {
 
     if (nextQuestion < questions.length) {
       navigate("/quiz-reponse", {
-        state: { score: nextScore, currentQuestion: nextQuestion },
+        state: { isCorrect, score: nextScore, currentQuestion: nextQuestion },
       });
     } else {
       navigate("/result", { state: { score: nextScore } });
@@ -80,7 +110,7 @@ function PageQuiz() {
 
   return (
     <div className="d-flex justify-content-center my-4">
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "20rem" }}>
         <Card.Img variant="top" src="src/assets/images/integoration.png" />
         <Card.Body>
           <Card.Title>Question {question.id}</Card.Title>
@@ -88,14 +118,8 @@ function PageQuiz() {
         </Card.Body>
         <ListGroup className="text-center">
           {question.answers.map((answer, index) => (
-            <ListGroup.Item
-              key={index}
-              className="d-flex justify-content-center"
-            >
-              <Button
-                variant="light"
-                onClick={() => handleAnswer(answer.isCorrect)}
-              >
+            <ListGroup.Item key={index} className="d-flex justify-content-center">
+              <Button variant="light" onClick={() => handleAnswer(answer.isCorrect)}>
                 {answer.text}
               </Button>
             </ListGroup.Item>
