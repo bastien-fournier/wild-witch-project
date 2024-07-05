@@ -3,10 +3,9 @@ import Buttons from "../components/Buttons.jsx";
 import CardInfo from "../components/CardInfo";
 
 export default function DataPage() {
-  const title = "Card Title";
+  const title = "Sorcières, Sorcières, dîtes-moi qui est la plus discriminée ?";
   const text =
-    "Some quick example text to build on the card title and make up the\n" +
-    "          bulk of the card's content.";
+    "Au XVIe siècle, être accusée de sorcellerie n'était pas exactement une chance de gagner à la loterie. Souvent, ces accusations ciblaient des femmes indépendantes, pauvres, ou simplement différentes. Flash info : Survie aux procès de sorcellerie ? Environ 66%. Oui, tu as bien lu !";
   return (
     <>
       <Container className="mt-5">
