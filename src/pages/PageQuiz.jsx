@@ -6,7 +6,7 @@ import "./PageQuiz.css";
 export default function PageQuiz() {
   return (
     <div className="card-container ">
-      <h1 className="text-center mt-5">Quiz</h1>
+      <h1 className="text-center">Quiz</h1>
       {/* <ProgressBar /> */}
       <Quiz />
     </div>

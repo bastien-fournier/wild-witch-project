@@ -9,9 +9,11 @@ function Modals() {
     <div
       className="modal show animate__animated animate__backInDown"
       style={{
-        display: "block",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         position: "initial",
-        marginTop: 250,
+        marginTop: 150,
       }}
     >
       <Modal.Dialog>

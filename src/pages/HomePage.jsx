@@ -8,7 +8,6 @@ export default function HomePage() {
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
-        marginTop: 100,
       }}
     >
       <div>
@@ -19,7 +18,6 @@ export default function HomePage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginTop: 100,
         }}
       >
         <Buttons text="Commencer" link="/info" />

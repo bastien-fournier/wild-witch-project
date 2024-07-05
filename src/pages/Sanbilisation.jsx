@@ -13,9 +13,9 @@ export default function Sambilisation() {
           style={{
             display: "flex",
             justifyContent: "center",
-            marginTop: 300,
             gap: 30,
           }}
+          className="mt-3"
         >
           <Buttons text="Précédent" link="/data-page" />
           <Buttons text="Suivant" link="/alerte-page" />

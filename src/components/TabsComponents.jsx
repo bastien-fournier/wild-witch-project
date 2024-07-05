@@ -21,7 +21,6 @@ export default function TabsComponents() {
       >
         <Tab
           style={{
-            maxHeight: "200px",
             overflowY: "auto",
             padding: "10px",
             border: 2,

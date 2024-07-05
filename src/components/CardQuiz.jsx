@@ -109,7 +109,7 @@ function PageQuiz() {
   };
 
   return (
-    <div className="d-flex justify-content-center my-4">
+    <div className="d-flex justify-content-center">
       <Card style={{ width: "20rem" }}>
         <Card.Img variant="top" src="src/assets/images/integoration.png" />
         <Card.Body>
@@ -118,8 +118,14 @@ function PageQuiz() {
         </Card.Body>
         <ListGroup className="text-center">
           {question.answers.map((answer, index) => (
-            <ListGroup.Item key={index} className="d-flex justify-content-center">
-              <Button variant="light" onClick={() => handleAnswer(answer.isCorrect)}>
+            <ListGroup.Item
+              key={index}
+              className="d-flex justify-content-center"
+            >
+              <Button
+                variant="light"
+                onClick={() => handleAnswer(answer.isCorrect)}
+              >
                 {answer.text}
               </Button>
             </ListGroup.Item>
