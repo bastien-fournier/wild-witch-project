@@ -3,8 +3,8 @@ import Modals from "../components/Modals";
 
 export default function AlertePage() {
   return (
-    <div>
+    <>
       <Modals />
-    </div>
+    </>
   );
 }

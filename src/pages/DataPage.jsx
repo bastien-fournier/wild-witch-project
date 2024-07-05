@@ -9,7 +9,7 @@ export default function DataPage() {
     "Au XVIe siècle, être accusée de sorcellerie n'était pas exactement une chance de gagner à la loterie. Souvent, ces accusations ciblaient des femmes indépendantes, pauvres, ou simplement différentes. Flash info : Survie aux procès de sorcellerie ? Environ 66%. Oui, tu as bien lu !";
   return (
     <>
-      <Container style={{ height: "100vh" }} className="mt-5">
+      <Container style={{ height: "100vh" }}>
         <Row className="justify-content-center">
           <CardInfo title={title} text={text} img={woman} />
         </Row>

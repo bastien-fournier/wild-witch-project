@@ -7,7 +7,7 @@ export default function GraphPage() {
 
   return (
     <>
-      <Container style={{ height: "100vh" }} className="mt-5">
+      <Container style={{ height: "100vh" }}>
         <TableauEmbed tableauUrl={tableauUrl} />
       </Container>
     </>

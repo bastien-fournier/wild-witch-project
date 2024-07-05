@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 export default function Sambilisation() {
   return (
     <>
-      <Container style={{ height: "100vh" }} className="mt-5">
+      <Container style={{ height: "100vh" }}>
         <div>
           <TabsComponents />
         </div>
